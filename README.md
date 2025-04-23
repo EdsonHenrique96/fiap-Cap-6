@@ -8,26 +8,45 @@
 
 # Nome do projeto
 
+
 ## Nome do grupo
 
 ## 👨‍🎓 Integrantes: 
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 1</a>
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 2</a>
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 3</a> 
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 4</a> 
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 5</a>
+- <a href="">Edson Henrique Felix Batista - RM: 566321</a>
+- <a href="">Matheus José Parra -  RM: 561907</a>
+- <a href="">Tiago Alves Cordeiro - RM: 561791</a> 
 
 ## 👩‍🏫 Professores:
 ### Tutor(a) 
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do Tutor</a>
+- <a href="https://www.linkedin.com/company/inova-fusca">Lucas Gomes</a>
 ### Coordenador(a)
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do Coordenador</a>
+- <a href="https://www.linkedin.com/company/inova-fusca">André Godoi</a>
 
 
 ## 📜 Descrição
 
-*Descreva seu projeto com base no texto do PBL (até 600 palavras)*
+### Problema
+Especialistas no setor indicam que o momento ideal para iniciar a colheita de cana é quando ela atinge a sua maturação, caracterizada como um processo fisiológico que envolve a formação de açúcares nas folhas e seu deslocamento e armazenamento nos colmos.  
 
+Mas como definir o momento exato para a colheita de cana? Há algum método?
+
+A resposta é sim. Hoje em dia já existem muitas maneiras de refinar o momento exato da colheita da cana-de-açúcar.
+
+Existe um método que faz a avaliação da maturidade da planta em relação à quantidade de açúcares presente no colmo da cana-de-açúcar. Neste caso usa-se um refratômetro de campo, que faz a leitura do valor de graus Brix do colmo.
+
+Para a determinação do Brix, deve ser feita uma média dos resultados obtidos de 3 partes do colmo (base, meio e ponta), com a colheita devendo ocorrer quando essa média for maior que 18.
+
+Feita a leitura, procede-se com a determinação do índice de maturação, onde o Brix do topo deve ser dividido pelo Brix da base vezes 100.
+
+IndícedeMaturação (IM) = Brixdotopodocolmo/brixdabasedocolmo*100
+
+Neste caso, a colheita deve ocorrer quando o IM for próximo a 1. 
+
+Fonte - https://blog.chbagro.com.br/perdas-na-colheita-de-cana-voce-sabe-como-reduzi-las
+
+### Solução
+
+Através de uma panilha com os dados coletados diariamente pelo refratômetro de campo, o programa faz a leitura e analise dos valores de grau de Brix coletados e salva no banco de dados as informações, indicando se está na maturação ideal para colheita
 
 ## 📁 Estrutura de pastas
 
@@ -49,21 +68,35 @@ Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
 
 ## 🔧 Como executar o código
 
-*Acrescentar as informações necessárias sobre pré-requisitos (IDEs, serviços, bibliotecas etc.) e instalação básica do projeto, descrevendo eventuais versões utilizadas. Colocar um passo a passo de como o leitor pode baixar o seu código e executá-lo a partir de sua máquina ou seu repositório. Considere a explicação organizada em fase.*
+1. Subir o banco de dados local.
+```sh
+./scripts/run-db.sh
+```
 
+2. Gerar as envs (Contem as credenciais do banco de dados).
+```sh
+cp .env.example .env
+```
+
+3. Gerar o ambiente python e instala as dependencias.
+```sh
+python3 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt
+```
+
+4. Executar a aplicação.
+```sh
+# Executar aplicação python
+python3 ./src/main.py ./config/data/exemplo.csv
+```
+
+5.
+
+- Os dados serão salvos no banco de dados
+- E será gerado o resultado o processamento em `/config/data/exemplo_resultado.json`
 
 ## 🗃 Histórico de lançamentos
 
-* 0.5.0 - XX/XX/2024
-    * 
-* 0.4.0 - XX/XX/2024
-    * 
-* 0.3.0 - XX/XX/2024
-    * 
-* 0.2.0 - XX/XX/2024
-    * 
-* 0.1.0 - XX/XX/2024
-    *
+
 
 ## 📋 Licença
 

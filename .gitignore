@@ -1,4 +1,7 @@
-*.csv
+.venv
 *.tsv
 *.xls
 *.xlsx
+.env
+*_resultados.json
+**/__pycache__/**
