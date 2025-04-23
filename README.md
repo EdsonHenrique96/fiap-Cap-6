@@ -68,8 +68,10 @@ Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
 
 ## 🔧 Como executar o código
 
+**IMPORTANTE: precisa de docker e docker compose instalados.**
 1. Subir o banco de dados local.
 ```sh
+# roda um docker compose com o banco de dados oracle
 ./scripts/run-db.sh
 ```
 
